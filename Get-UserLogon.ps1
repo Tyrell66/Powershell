@@ -1,5 +1,3 @@
-#source: https://sid-500.com/2018/02/28/powershell-get-all-logged-on-users-per-computer-ou-domain-get-userlogon/
-
 function Get-UserLogon {
  
 [CmdletBinding()]
