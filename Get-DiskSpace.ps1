@@ -1,0 +1,1 @@
+Get-CimInstance -ClassName Win32_LogicalDisk -ComputerName lutcidigit01,lutcidigit02,lutcidigit03,lutcidigit04,lutcidigit05 | Select-Object -Property SystemName, DeviceID, VolumeName, @{'Name' = 'Size (GB)'; Expression = { [int]($_.Size / 1GB) }},@{'Name' = 'FreeSpace (GB)'; Expression= { [int]($_.FreeSpace / 1GB) }} | Sort SystemName, DeviceID | FT
